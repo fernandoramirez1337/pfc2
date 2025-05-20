@@ -1,0 +1,58 @@
+# Compiled object files
+
+\*.o
+\*.lo
+\*.la
+\*.al
+
+# Precompiled Headers
+
+\*.gch
+\*.pch
+
+# Libraries
+
+\*.so
+\*.dylib
+\*.a
+
+# Executables and shared libraries
+
+sand\_bench
+test\_sand
+
+# CMake
+
+CMakeFiles/
+CMakeCache.txt
+cmake\_install.cmake
+Makefile
+
+# Build directory
+
+build/
+
+# Editor folders
+
+.vscode/
+.idea/
+
+# macOS files
+
+.DS\_Store
+
+# Backup files
+
+\*\~
+
+# Logs and databases
+
+\*.log
+
+# Temporary files
+
+\*.tmp
+
+# Generated data
+
+data.bin
