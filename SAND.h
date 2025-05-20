@@ -1,16 +1,18 @@
+// SAND.h
 #ifndef SAND_H
 #define SAND_H
 
 #include <stdio.h>
 #include <stdint.h>
+#include <stddef.h>
 
 typedef uint64_t u64;
 
-#define SAND128_ROUNDS 54
-#define SAND128_BLOCK_SIZE 16 
-#define SAND128_KEY_SIZE 16 
+#define SAND128_ROUNDS     54
+#define SAND128_BLOCK_SIZE 16
+#define SAND128_KEY_SIZE   16
 
-#define SWAP(x,y) ((x) ^= (y) , (y) ^= (x) , (x) ^= (y))
+#define SWAP(x,y) ((x) ^= (y), (y) ^= (x), (x) ^= (y))
 
 u64 ROTL(u64 x, int shift);
 u64 P(u64 x);

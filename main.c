@@ -9,7 +9,7 @@
 #include <inttypes.h>
 #include "SAND.h"
 
-#define DATA_SIZE (2 * 1024 * 1024)  // 2 MB
+#define DATA_SIZE (2 * 1024 * 1024)  // 2 MiB
 
 static uint64_t get_time_us(void) {
   struct timespec ts;
@@ -34,9 +34,9 @@ static void PrintData(const char *title, const uint8_t *data, size_t len) {
 }
 
 int main(void) {
-  uint8_t *plaintext = malloc(DATA_SIZE);
+  uint8_t *plaintext  = malloc(DATA_SIZE);
   uint8_t *ciphertext = malloc(DATA_SIZE);
-  uint8_t *decrypted = malloc(DATA_SIZE);
+  uint8_t *decrypted  = malloc(DATA_SIZE);
   if (!plaintext || !ciphertext || !decrypted) {
     fprintf(stderr, "Allocation failed\n");
     return EXIT_FAILURE;
@@ -78,7 +78,7 @@ int main(void) {
 
   uint64_t usec = t1 - t0;
   double sec = usec / 1e6;
-  double mbps = (double)DATA_SIZE / (1024.0*1024.0) / sec;
+  double mbps = (double)DATA_SIZE / (1024.0 * 1024.0) / sec;
   size_t blocks = DATA_SIZE / SAND128_BLOCK_SIZE;
   double us_per_block = (double)usec / blocks;
 
