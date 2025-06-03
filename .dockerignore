@@ -1,0 +1,15 @@
+# Ignorar el directorio de compilación local
+build/
+
+# Ignorar el directorio de datos
+data/
+
+# Ignorar otros archivos/directorios innecesarios para la imagen Docker
+.git/
+.gitignore
+*.pyc
+__pycache__/
+*.pdf
+README.md
+.vscode/
+*.DS_Store
